@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class PalindromeNumber {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(new boolean[]{
+        boolean[] soln = new boolean[]{
                 isPalindrome(121),
                 isPalindrome(-121),
                 isPalindrome(10),
@@ -12,7 +12,8 @@ public class PalindromeNumber {
                 isPalindrome(999),
                 isPalindrome(-404),
                 isPalindrome(404)
-        }));
+        };
+        System.out.println(Arrays.toString(soln));
 
         // - [true, false, false, true, true, false, true]
     }
