@@ -14,7 +14,8 @@ public class PascalsTriangle {
                 System.out.println(Arrays.toString(trimArray(sol1)));
             System.out.println();
         }
-        /** ------ Length: 3 -------
+        /** 
+	    ------ Length: 3 -------
             [1]
             [1, 1]
             [1, 2, 1]
