@@ -15,7 +15,7 @@ public class PascalsTriangle {
             System.out.println();
         }
         /** 
-	    ------ Length: 3 -------
+	        ------ Length: 3 -------
             [1]
             [1, 1]
             [1, 2, 1]
