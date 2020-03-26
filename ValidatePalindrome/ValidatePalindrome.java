@@ -12,6 +12,8 @@ public class ValidatePalindrome {
         };
 
         System.out.println(Arrays.toString(soln));
+
+        //  [true, true, true, false]
     }
 
     private static boolean validatePalindrome(String s) {
