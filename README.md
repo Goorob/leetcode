@@ -1,2 +1,5 @@
 # Algorithms
- Problems solved in JAVA
+> **Language** - JAVA
+* Mini Problems
+* Dynamic Programming
+* Competitive Coding
