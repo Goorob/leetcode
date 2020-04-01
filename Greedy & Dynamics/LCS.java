@@ -4,7 +4,7 @@ public class LongestCommonSubsequence {
     public static void main(String[] args) {
         String[] soln = new String[]{
                 lcs("AGGTAB", "GXTXAYB"),
-                lcs("SDLPCMA", "SPLCMA")
+                lcs("SDLPCMA", "SPLCMA") 
         };
 
         for(String sol : soln)
