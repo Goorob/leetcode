@@ -13,7 +13,7 @@ public class FractionalKnapsack {
         FKnap(new int[]{18, 5, 9, 10, 12, 17}, new int[]{7, 2, 3, 5, 3, 2}, 13);
 
         /**
-           Item	  Profit  Weight	P/W
+           Item		Profit		Weight		P/W
            ----------------------------
            1		17		2		8.5
            2		12		3		4.0
