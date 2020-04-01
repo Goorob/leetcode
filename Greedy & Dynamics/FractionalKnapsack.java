@@ -14,7 +14,6 @@ public class FractionalKnapsack {
 
         /**
            Item		Profit		Weight		P/W
-           ----------------------------
            1		17		2		8.5
            2		12		3		4.0
            3		9		3		3.0
@@ -51,7 +50,6 @@ public class FractionalKnapsack {
         // Get the new weights sorted according to profits by weights
 
         System.out.println("Item\tProfit\tWeight\tP/W");
-        System.out.println("---------------------------");
 
         for (int i = 0; i < N; i++) {
             if (CW + weights[i] < sackCapacity) {
