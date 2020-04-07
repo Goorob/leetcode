@@ -1,6 +1,7 @@
 package LongestSubsequence;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class LongestSubSeq {
     public static void main(String[] args) {
@@ -12,22 +13,36 @@ public class LongestSubSeq {
         };
         System.out.println(Arrays.toString(soln));
         // [abc, b, pwke, qwerty]
+
+//        System.out.println(longestSubSeq(new int[]{1, 2, 0, 4, 5}));
+
+
     }
 
     private static String longestSubstring(String s) {
-        char current, next;
-        char[] char_array = s.toCharArray();
+        int N = s.length();
+        String longestSubString = "";
 
-        String result = "";
-        result += char_array[0];
-
-        for (int i = 0; i < char_array.length - 1; i++) {
-            current = char_array[i];
-            next = char_array[i + 1];
-
-            if (current != next && !result.contains(String.valueOf(next)))
-                result += next;
+        for (int i = 1; i < N; i++) {
+            for (int j = 0; j < i; j++) {
+                if (s.charAt(i) > s.charAt(j)){
+                    longestSubString += s.charAt(i);
+                }
+            }
         }
-        return result;
+        return longestSubString;
+    }
+
+    private static int longestSubSeq(int[] ints) {
+        int N = ints.length;
+        Integer[] lis = new Integer[N];
+        Arrays.fill(lis, 1);
+
+        for (int i = 1; i < N; i++)
+            for (int j = 0; j < i; j++)
+                if (ints[i] > ints[j] && lis[i] < lis[j] + 1)
+                    lis[i] = lis[j] + 1;
+
+        return Collections.max(Arrays.asList(lis));
     }
 }
