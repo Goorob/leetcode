@@ -1,5 +1,3 @@
-package MaximumSubarray;
-
 import java.util.Arrays;
 
 public class MaxSubArray {

@@ -1,5 +1,3 @@
-package DynamicProgramming;
-
 public class LongestCommonSubsequence {
     public static void main(String[] args) {
         String[] soln = new String[]{
