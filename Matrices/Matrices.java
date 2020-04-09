@@ -19,11 +19,13 @@ class Matrices {
         return res_mat;
     }
 
-    int[][] mul(int[][] mat1, int[][] mat2, int rows, int cols){
-        int[][] res_mat = new int[rows][cols];
-        for (int i = 0; i < rows; i++)
-            for (int j = 0; j < cols; j++)
-                for (int k = 0; k < rows; k++)
+    int[][] mul(int[][] mat1, int row1, int col1, int[][] mat2, int row2, int col2){
+        if (col1 != row2)
+            throw new IllegalArgumentException("Matrices cannot be multiplied");
+        int[][] res_mat = new int[row1][col2];
+        for (int i = 0; i < row1; i++)
+            for (int j = 0; j < col2; j++)
+                for (int k = 0; k < row2; k++)
                     res_mat[i][j] += mat1[i][k] * mat2[k][j];
         return res_mat;
     }

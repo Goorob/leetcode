@@ -18,10 +18,9 @@ Subtracting Mat1 and Mat2
 [0, 0, 0]
 [0, 0, 0]
 
-Multiplying Mat1 and Mat2
-[30, 36, 42]
-[66, 81, 96]
-[102, 126, 150]
+Multiplying Mat3(2x3) and Mat4(3x2)
+[22, 28]
+[49, 64]
 
 Multiplying Mat1 by 10
 [10, 20, 30]

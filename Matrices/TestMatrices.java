@@ -15,6 +15,17 @@ public class TestMatrices {
                 {7, 8, 9}
         };
 
+        int[][] mat3 = new int[][]{
+                {1, 2, 3},
+                {4, 5, 6}
+        };
+
+        int[][] mat4 = new int[][]{
+                {1, 2},
+                {3, 4},
+                {5, 6}
+        };
+
         int row = matrice_1.length;
         int col = matrice_1.length;
 
@@ -46,7 +57,7 @@ public class TestMatrices {
 
         System.out.println("Multiplying Mat1 and Mat2");
         // Multiplying Mat1 and Mat2
-        for (int[] res : matrix.mul(matrice_1, matrice_2, row, col))
+        for (int[] res : matrix.mul(mat3, 2, 3, mat4, 3, 2))
             System.out.println(Arrays.toString(res));
         System.out.println();
 
@@ -70,7 +81,7 @@ public class TestMatrices {
 
         System.out.println("Multiplying Identity Mat of size 3 by 7");
         // Multiplying Identity Mat by a constant k
-        int[][] identity = new Matrices().identityMat(3);
+        int[][] identity = matrix.identityMat(3);
         for (int[] res : matrix.mulbyk(identity, row, col, 7))
             System.out.println(Arrays.toString(res));
         System.out.println();
