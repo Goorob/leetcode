@@ -9,17 +9,29 @@ public class TwoSum {
         twoSum(new int[]{3, 4, 6, 2, 8, 5}, 9);
     }
 
-//    private static void twoSum(int[] arr, int target) {
-//        HashSet<String> hashSet = new HashSet<>();
-//        for (int x : arr) {
-//            int y = target - x;
-//            if (!hashSet.contains(String.valueOf(y)))
-//                hashSet.add(String.valueOf(x));
-//            else
-//                System.out.println(x + ", " + y);
-//        }
-//    }
+    // Complexity: Space - O(1), Time - O(n*n)
+    private static void twoSum2(int[] arr, int target){
+        for (int i = 0; i < arr.length; i++)
+            for (int j = 0; j < arr.length; j++)
+                if (arr[i] + arr[j] == target && i != j){
+                    System.out.println("[" + arr[i] + ", " + arr[j] + "]");
+                    return;
+                }
+    }
 
+    // Complexity: Space - O(n), Time - O(n)
+    private static void twoSum1(int[] arr, int target) {
+        HashSet<String> hashSet = new HashSet<>();
+        for (int x : arr) {
+            int y = target - x;
+            if (!hashSet.contains(String.valueOf(y)))
+                hashSet.add(String.valueOf(x));
+            else
+                System.out.println(x + ", " + y);
+        }
+    }
+
+    // Complexity: Space - O(1), Time - O(n*logn)
     private static void twoSum(int[] arr, int target) {
         Arrays.sort(arr);
         int left = 0, right = arr.length - 1;
