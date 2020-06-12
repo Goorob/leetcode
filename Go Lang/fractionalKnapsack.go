@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"strconv"
+	"math"
 )
 
 func main() {
@@ -93,9 +93,6 @@ func sort(arr []float64) []float64 {
 }
 
 func roundOff(x float64) float64 {
-	if s, err := strconv.ParseFloat(fmt.Sprintf("%.2f", x), 64); err == nil {
-		return s
-	} else {
-		return 0
-	}
+	return math.Round(x*100) / 100
 }
+
