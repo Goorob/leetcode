@@ -18,7 +18,6 @@ func main() {
 	//	Total Profit:  50.86
 	//	Total Weight:  13
 	//	Fraction of Items Taken:  [1 1 1 0.71 0 0]
-
 }
 
 func fKnap(profits, weights []int, sackCapacity int) {
@@ -68,8 +67,8 @@ func customSort(profits, weights []int, pbw []float64) [][]int {
 	for i := 0; i < N; i++ {
 		for j := 0; j < N; j++ {
 			if pbw[i] == roundOff(float64(profits[j])/float64(weights[j])) {
-				swapI(i, j, profits)
-				swapI(i, j, weights)
+				profits[i], profits[j] = profits[j], profits[i]
+				weights[i], weights[j] = weights[j], weights[i]
 			}
 		}
 	}
@@ -84,21 +83,13 @@ func sort(arr []float64) []float64 {
 		isSorted = true
 		for i := 0; i < len(arr)-1-counter; i++ {
 			if arr[i] < arr[i+1] {
-				swapF(i, i+1, arr)
+				arr[i], arr[i+1] = arr[i+1], arr[i]
 				isSorted = false
 			}
 		}
 		counter++
 	}
 	return arr
-}
-
-func swapI(i, j int, arr []int) {
-	arr[i], arr[j] = arr[j], arr[i]
-}
-
-func swapF(i, j int, arr []float64) {
-	arr[i], arr[j] = arr[j], arr[i]
 }
 
 func roundOff(x float64) float64 {
