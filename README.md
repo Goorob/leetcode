@@ -1,5 +1,4 @@
 # Algorithms
-> **Language** - JAVA
-* Mini Problems
-* Dynamic Programming
-* Competitive Coding
+> **Language** - JAVA & Go
+--
+index will be added later
