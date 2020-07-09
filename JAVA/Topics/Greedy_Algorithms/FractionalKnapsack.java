@@ -25,7 +25,7 @@ public class FractionalKnapsack{
         double[] X = new double[N];
         double cW = 0, cP = 0;
 
-        System.out.println("No\tP\tW\tP/W");
+        System.out.println("Item\t\tProfit\t\tWeight\t\tP/W");
 
         for (int i = 0; i < N; i++) {
             Item currentItem = items[i];
@@ -41,7 +41,7 @@ public class FractionalKnapsack{
             }
             System.out.println(
                     String.format(
-                            "%d\t%d\t%d\t%.2f",
+                            "%d\t\t\t%d\t\t\t%d\t\t\t%.2f",
                             i + 1,
                             currentItem.profit,
                             currentItem.weight,
@@ -95,14 +95,14 @@ public class FractionalKnapsack{
         fKnapsack(items,sackCapacity);
 
         /*
-            No	P	W	P/W
-            1	17	2	8.50
-            2	12	3	4.00
-            3	9	3	3.00
-            4	18	7	2.57
-            5	5	2	2.50
-            6	10	5	2.00
-            
+            Item		Profit           	Weight		        P/W
+            1			17			2			8.50
+            2			12			3			4.00
+            3			9			3			3.00
+            4			18			7			2.57
+            5			5			2			2.50
+            6			10			5			2.00
+
             Total Profit: 50.78
             Total Weight: 13.0
             Fraction of Items Taken: [1.0, 1.0, 1.0, 0.71, 0.0, 0.0]
