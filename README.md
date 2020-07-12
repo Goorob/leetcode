@@ -1,4 +1,5 @@
-# Algorithms
-> **Language** - JAVA & Go
---
-index will be added later
+# Leetcode Problems
+
+> ## **Language** - JAVA
+>
+> index will be added later
